@@ -22,8 +22,6 @@ repositories {
 
 dependencies {
 	implementation libs.spring.jpa
-	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.1.0'
-
 	implementation libs.spring.security
 	implementation libs.spring.web
 	implementation libs.springdoc.openapi

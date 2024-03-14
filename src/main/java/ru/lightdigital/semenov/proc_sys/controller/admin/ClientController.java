@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.lightdigital.semenov.proc_sys.db.client.ClientDbService;
 import ru.lightdigital.semenov.proc_sys.dto.client.ClientDto;
 import ru.lightdigital.semenov.proc_sys.service.client.ClientService;
 

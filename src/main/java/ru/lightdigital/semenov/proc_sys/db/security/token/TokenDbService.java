@@ -1,7 +1,6 @@
 package ru.lightdigital.semenov.proc_sys.db.security.token;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.lightdigital.semenov.proc_sys.db.security.user.User;
@@ -41,7 +40,7 @@ public class TokenDbService {
     }
 
     public void expireOldTokens(Duration jwtLifetime) {
-        List<Token> tokens = repository.findAllNotRevokedTokens();;
+        List<Token> tokens = repository.findAllNotRevokedTokens();
         tokens.forEach(token -> {
             if (jwtLifetime.minus(Duration.between(token.getCreationTime(), LocalDateTime.now())).isNegative()) {
                 token.setRevoked(true);

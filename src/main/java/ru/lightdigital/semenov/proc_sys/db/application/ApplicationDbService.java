@@ -2,7 +2,6 @@ package ru.lightdigital.semenov.proc_sys.db.application;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.lightdigital.semenov.proc_sys.dto.application.ApplicationDto;
 
 import java.util.List;
 import java.util.NoSuchElementException;
