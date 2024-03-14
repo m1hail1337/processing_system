@@ -1,0 +1,24 @@
+[versions]
+spring-boot = "3.2.3"
+jjwt = "0.12.5"
+
+[plugins]
+spring-plugin = { id = "org.springframework.boot", version.ref = "spring-boot" }
+
+[libraries]
+spring-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+spring-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "spring-boot" }
+spring-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "spring-boot" }
+springdoc-openapi = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version = "2.3.0"}
+
+jjwt-api = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
+jjwt-impl = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
+jjwt-jackson = { module = "io.jsonwebtoken:jjwt-api", version.ref = "jjwt" }
+
+lombok = { module = "org.projectlombok:lombok", version = "1.18.30" }
+
+postgresql-driver = { module = "org.postgresql:postgresql", version = "42.6.1" }
+liquibase = { module = "org.liquibase:liquibase-core", version = "4.24.0" }
+
+#Tests
+spring-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }

@@ -1,0 +1,42 @@
+plugins {
+	id 'java'
+	alias(libs.plugins.spring.plugin)
+}
+
+group = 'ru.lightdigital.semenov'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation libs.spring.jpa
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.1.0'
+
+	implementation libs.spring.security
+	implementation libs.spring.web
+	implementation libs.springdoc.openapi
+	implementation libs.liquibase
+	implementation libs.jjwt.api
+	compileOnly libs.lombok
+	runtimeOnly libs.postgresql.driver
+	runtimeOnly libs.jjwt.impl
+	runtimeOnly libs.jjwt.jackson
+	annotationProcessor libs.lombok
+	testImplementation libs.spring.test
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
