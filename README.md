@@ -10,4 +10,4 @@
 * login: dasha
 * password: 00000
 ## Схема Базы Данных 
-![image](https://github.com/m1hail1337/processing_system/docs/database_schema.png)
+![database_schema.png](docs%2Fdatabase_schema.png)
