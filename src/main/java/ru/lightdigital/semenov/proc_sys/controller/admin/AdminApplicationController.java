@@ -20,7 +20,7 @@ import java.util.List;
 @Tag(name = "Контроллер заявок (роль: Администратор)",
         description = "Описывает операции, которые можно выполнять с заявками")
 @SecurityRequirement(name = "bearer")
-public class ApplicationController {
+public class AdminApplicationController {
     private final ApplicationService applicationService;
 
     @Operation(summary = "Просмотр всех заявок",
